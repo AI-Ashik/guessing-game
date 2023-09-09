@@ -76,6 +76,14 @@ input {
   transition: 0.3s all;
 }
 
+.btn:hover {
+  background-color: orange;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
 .btn:active {
   transform: scale(1.1);
 }
@@ -87,6 +95,12 @@ p {
 .large-text {
   font-size: 1.5rem;
   color: bisque;
+}
+
+.sm-large-text {
+  font-size: 1.2rem;
+  color: rgb(142, 255, 5);
+  font-weight: bold;
 }
 
 @media screen and (max-width: 600px) {

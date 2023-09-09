@@ -1,6 +1,8 @@
 // creating new elements
 var totalWins = 0;
 var totalLost = 0;
+var attempts = 0;
+var totalAttempts = 5;
 
 // finding the html elements
 const cardBody = document.querySelector(".card-body");
@@ -15,10 +17,27 @@ const gameResultMessage = document.createElement("p");
 gameResultMessage.classList.add("large-text");
 cardBody.appendChild(gameResultMessage);
 
+const reloadMessage = document.createElement("p");
+reloadMessage.classList.add("sm-large-text");
+cardBody.appendChild(reloadMessage);
+
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  checkResult(guessingNumber.value);
   guessingNumber.value = "";
+  attempts++;
+
+  if (attempts > 5) {
+    guessingNumber.disabled = true;
+    checkButton.disabled = true;
+    checkButton.classList.add("disabled");
+
+    reloadMessage.innerHTML = "Reload the Page to pay again  or Click F5";
+  } else {
+    checkResult(guessingNumber.value);
+    remainingAttempts.innerHTML = `Remaining Attempts : ${
+      totalAttempts - attempts
+    }`;
+  }
 });
 
 function checkResult(guessingNumber) {
