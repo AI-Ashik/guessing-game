@@ -23,7 +23,7 @@
 
 .card {
   width: 32rem;
-  height: 20rem;
+  height: 21rem;
   background-color: rgb(153, 76, 205);
   border-radius: 0.6rem;
   padding: 1rem;
@@ -116,6 +116,9 @@ p {
   #guessingNumber {
     width: 65%;
   }
+  .card {
+    height: 24rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -130,5 +133,8 @@ p {
 
   #guessingNumber {
     width: 65%;
+  }
+  .card {
+    height: 24rem;
   }
 }
