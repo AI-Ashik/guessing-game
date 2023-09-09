@@ -100,11 +100,7 @@ p {
   }
 
   #guessingNumber {
-    width: 100%;
-  }
-
-  .label {
-    width: 100%;
+    width: 65%;
   }
 }
 
@@ -119,9 +115,6 @@ p {
   }
 
   #guessingNumber {
-    width: 100%;
-  }
-  .label {
-    width: 100%;
+    width: 65%;
   }
 }
